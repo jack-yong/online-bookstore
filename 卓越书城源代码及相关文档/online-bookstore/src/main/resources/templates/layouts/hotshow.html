@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="maindiv2" th:fragment="hotshow">
+
+    <div class="slider" style="margin-bottom:10px;">
+        <div id="lofslidecontent45" class="lof-slidecontent">
+            <div class="preload">
+                <div></div>
+            </div>
+            <!-- MAIN CONTENT -->
+            <div class="lof-main-outer">
+                <ul class="lof-main-wapper">
+                    <li><img th:src="@{/images/advers/adver1.jpg}" style="width: 1050px;height: 250px;" /></li>
+                    <li><img th:src="@{/images/advers/adver2.jpg}" style="width: 1050px;height: 250px;"/></li>
+                    <li><img th:src="@{/images/advers/adver3.jpg}" style="width: 1050px;height: 250px;"/></li>
+                    <li><img th:src="@{/images/advers/adver4.jpg}" style="width: 1050px;height: 250px;"/></li>
+                </ul>
+            </div>
+            <div class="lof-navigator-wapper">
+                <div class="lof-navigator-outer">
+                    <ul class="lof-navigator">
+                        <li><span>1</span></li>
+                        <li><span>2</span></li>
+                        <li><span>3</span></li>
+                        <li><span>4</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><!--slider-->
+
+    <img th:src="@{/css/images/hot.png}">
+    <hr>
+
+    <ul class="mainul" >
+        <li th:each="random8Book:${random8Books}">
+            <div>
+                <a  th:href="@{'/BookDetail?'+'dowhat=findDetail&Bid='+ ${random8Book.Bid}}" target="_blank"><img th:src="${random8Book.Bimage}"></a>
+            </div>
+            <div>
+                <font class="price1" th:text="${random8Book.Bprice}"></font><br>
+                <font class="bookname1" th:text="${random8Book.Bname}"></font><br>
+                <a th:href="@{'/Search'+'?dowhat=searchByKey&key='+${random8Book.Sname}+'&type=&refer=Bid'}" class="shopname1" th:text="${random8Book.Sname}"></a>
+            </div>
+            <div>
+                <div>
+						<span class="tradenum1">成交&nbsp;&nbsp;<font
+                                class="font_bold_pink" th:text="${random8Book.Bsalednum}">笔</font></span>
+                </div>
+                <div>
+						<span class="commentnum1">评价&nbsp;&nbsp;
+						<font class="font_bold_blue" th:text="${random8Book.Bcommentnum}"></font></span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

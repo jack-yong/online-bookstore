@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link th:href="@{/css/dashboard.css}" rel="stylesheet">
+    <style type="text/css">
+        /* Chart.js */
+
+        @-webkit-keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        .chartjs-render-monitor {
+            -webkit-animation: chartjs-render-animation 0.001s;
+            animation: chartjs-render-animation 0.001s;
+        }
+    </style>
+</head>
+<body>
+<!--顶部导航栏-->
+<div th:replace="layouts/commons :: topbar"></div>
+<div class="container-fluid">
+    <div class="row">
+        <!--侧边栏-->
+        <div th:replace="layouts/commons::sidebar"></div>
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+            <form th:action="@{/updateShop}" method="post">
+                <input type="hidden" th:value="${Shop.getSid()}" name="sid">
+                <div class="form-group">
+                    <label>店铺名称</label>
+                    <input th:value="${Shop.getSname()}" type="text" name="name" class="form-control" >
+                </div>
+                <div class="form-group">
+                    <label>活动</label>
+                    <input th:value="${Shop.getSactivity()}" type="text" name="activity" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>运费</label>
+                    <input th:value="${Shop.getStransprice()}" type="text" name="transprice" class="form-control" >
+                </div>
+                <div class="form-group">
+                    <label>店铺简介</label>
+                    <input th:value="${Shop.getSsummary()}" type="text" name="summary" class="form-control" >
+                </div>
+                <button type="submit" class="btn btn-primary">更新</button>
+            </form>
+        </main>
+    </div>
+</div>
+
+</body>
+</html>

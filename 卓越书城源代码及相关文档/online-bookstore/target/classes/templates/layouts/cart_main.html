@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="cartmain" th:fragment="cart_main">
+
+
+    <!-- 购物车主体 -->
+    <div class="cart" >
+
+        <div th:if="${size} == 0">
+            <div class="cart_row_div font_bold_gray">购物车还是空的哟~快去书城逛逛吧!</div><br>
+            <a th:href="@{/index}" class="greenbutton">热销书籍</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+
+        <div class="cart_title" th:if="${size} != 0">
+            <input type="checkbox" id="allbooksincart_checkbox" onclick="checkAllBooksInCartBox()"/>全选&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" id="deleteall" style="visibility:hidden;" onclick="deleteAllBooksInCart()">批量删除</a>
+            <div style="width:44%;">商品信息</div>
+            <div style="width:12%;">单价(元)</div>
+            <div style="width:11%;">数量</div>
+            <div style="width:12%;">小计</div>
+            <div style="width:6.5%;">操作</div>
+        </div>
+
+        <div class="cart_row_div" th:each="bookInCart,bookInCartStart:${bookInCartBeanList}" >
+            <div class="cart_saler_div">
+                <img th:src="${bookInCart.Sicon}"/><span th:text="${bookInCart.Sname}"></span>
+            </div>
+            <div class="cart_value_div">
+
+
+                <input type="checkbox" name="bookincart_checkbox" th:value="${bookInCartStart.index}"  onclick="checkBookInCartBox(this)"/>
+
+                <div style="width:52.5%;">
+                    <a href="" target="_blank" class="detail_a"><img th:src="${bookInCart.Bimage}"/></a>
+                    <span style="float" th:text="${bookInCart.Bname}"></span>
+                </div>
+
+                <!-- 单价-->
+                <div style="width:13%;">
+                    <del class="unitprice" th:text="${bookInCart.Boriprice}+'￥'"></del><br>
+                    <span>￥</span><span th:text="${bookInCart.Bprice}"></span>
+                </div>
+
+                <!-- 数量-->
+                <div style="width:12%;">
+                    <input type="button" class="numbutton" value="-" onclick="subNum(this)">
+                    <input type="text" class="numedit" th:value="${bookInCart.Tboughtnum}" onblur="editNum(this);" onfocus="getFocusedNum(this);">
+                    <input type="button" class="numbutton" value="+" onclick="addNum(this)">
+                </div>
+
+                <!-- 小计-->
+                <div style="width:13%;">
+                    <span class="font_bold_green">￥</span><span class="font_bold_green" th:text="${bookInCart.Tboughtnum*bookInCart.Bprice}"></span>
+                </div>
+
+                <!-- 操作 -->
+                <div style="width:6.5%;">
+                    <a href="javascript:void(0)" onclick="deleteABookInCart(this)" class="greenbutton" style="width:30px;position:relative;top:40px;">删除</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 下部分的结算 -->
+    <div class="cart_footer" th:if="${size} != 0">
+        <div>已选商品<span class="font_bold_green">0</span>件</div>
+        <div>合计（不含运费）:<span class="font_bold_green">￥</span><span class="font_bold_green"></span></div>
+        <a class="settlebtn" th:href="@{/toSubmiteOrder}">结算</a>
+    </div>
+
+</div>
+
+</body>
+</html>

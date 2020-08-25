@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="left" th:fragment="left">
+    <div class="imgtext"><img th:src="@{/css/images/myinfo.png}" /><span class="font_bold_green">我的资料</span></div>
+    <dl>
+        <dt class="">
+            <a href="/userinfo">个人信息</a>
+        </dt>
+        <dt class='' >
+            <a href="/myaddress_page">收货地址</a>
+        </dt>
+        <dt class=''>
+            <a href="/queryOrder">我的订单</a>
+        </dt>
+    </dl>
+
+
+</div><!--left-->
+</body>
+</html>

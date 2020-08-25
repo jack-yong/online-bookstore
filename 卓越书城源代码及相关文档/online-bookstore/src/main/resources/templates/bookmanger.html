@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link th:href="@{/css/dashboard.css}" rel="stylesheet">
+    <style type="text/css">
+        /* Chart.js */
+
+        @-webkit-keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        .chartjs-render-monitor {
+            -webkit-animation: chartjs-render-animation 0.001s;
+            animation: chartjs-render-animation 0.001s;
+        }
+    </style>
+</head>
+<body>
+<!--顶部导航栏-->
+<div th:replace="layouts/commons :: topbar"></div>
+
+<div class="container-fluid">
+    <div class="row">
+        <!--侧边栏-->
+        <div th:replace="layouts/commons::sidebar"></div>
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+            <div class="table-responsive">
+                <table class="table table-striped table-sm">
+                    <thead>
+                    <tr>
+                        <th>书籍id</th>
+                        <th>名称</th>
+                        <th>原价</th>
+                        <th>折扣价</th>
+                        <th>所属店铺</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="bookInCart:${bookInCarts}">
+                        <td th:text="${bookInCart.getBid()}"></td>
+                        <td  th:text="${bookInCart.getBname()}"></td>
+                        <td th:text="${bookInCart.getBoriprice()}"></td>
+                        <td th:text="${bookInCart.getBprice()}"></td>
+                        <td th:text="${bookInCart.getSname()}"></td>
+
+                        <td>
+                            <a class="btn btn-sm btn-primary" th:href="@{'/bookedit?Bid='+ ${bookInCart.getBid()}}">编辑</a>
+                            <a class="btn btn-sm btn-danger" th:href="@{'/bookdel?Bid='+${bookInCart.getBid()}}">删除</a>
+
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</div>
+
+</body>
+</html>

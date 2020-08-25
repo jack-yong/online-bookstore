@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cyong.mapper.OrderformMapper">
+        <select id="findOrderFormByOid" resultType="Orderform">
+                  select Oid,Orderform.Uid,Orderform.Sid,Aid,Ototalbooksprice,Ototaltransprice,
+                  date_format(Osubmittime,'%Y-%c-%d %H:%i:%s'),date_format(Opaytime,'%Y-%c-%d %H:%i:%s'),
+                  date_format(Oreceivetime,'%Y-%c-%d %H:%i:%s'),date_format(Ofinishedtime,'%Y-%c-%d %H:%i:%s'),
+                  Ostatus,Shop.Sicon,Shop.Sname
+                  from onlinebookstore.orderform Orderform,onlinebookstore.shop  Shop
+                  where Orderform.Oid= #{oid} and Orderform.Sid=Shop.Sid limit 1
+        </select>
+
+        <select id="getOrderPageCountByUid" resultType="int">
+              select count(*) from onlinebookstore.orderform
+               where Uid=#{uid}
+        </select>
+    
+        <delete id="deleteOrder" parameterType="int">
+              delete from onlinebookstore.orderform
+               where Oid =#{oid}
+        </delete>
+
+        <insert id="addOrder" parameterType="Orderform" useGeneratedKeys = "true" keyProperty = "Oid"  keyColumn = "Oid">
+                  insert into onlinebookstore.orderform
+                  (Uid,Sid,Aid,Ototalbooksprice,Ototaltransprice,Osubmittime,Ostatus)
+                  values (#{Uid},#{Sid},#{Aid},#{Ototalbooksprice},#{Ototaltransprice},#{Osubmittime},#{Ostatus})
+        </insert>
+
+    <select id="findOrderFormsByUidByPage" resultType="Orderform">
+            select Oid,Orderform.Uid,Orderform.Sid,Aid,Ototalbooksprice,Ototaltransprice,Osubmittime,Ostatus,Shop.Sicon,Shop.Sname
+            from onlinebookstore.orderform Orderform,onlinebookstore.shop Shop where Orderform.Uid=#{uid} and Orderform.Sid=Shop.Sid order by Osubmittime DESC
+    </select>
+
+    <select id="findBookByOid" resultType="BookInCart">
+            select Book.Bid,Bimage,Bname,Boriprice,Bprice,Tboughtnum,Tstatus
+            from onlinebookstore.orderform Orderform,onlinebookstore.transaction t,onlinebookstore.book Book where Orderform.Oid = #{Oid} and Orderform.Oid=t.Oid and t.Bid=Book.Bid;
+
+    </select>
+
+    <select id="findBookBySid" resultType="Orderform">
+        select Oid,Orderform.Uid,Orderform.Sid,Aid,Ototalbooksprice,Ototaltransprice,Osubmittime,Ostatus,Shop.Sicon,Shop.Sname
+            from onlinebookstore.orderform Orderform,onlinebookstore.shop Shop where Orderform.Sid=#{Sid} and Orderform.Sid=Shop.Sid order by Osubmittime DESC
+    </select>
+</mapper>

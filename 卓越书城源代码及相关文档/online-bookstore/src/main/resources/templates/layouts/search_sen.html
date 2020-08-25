@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<!-- 搜索书籍结果 -->
+<ul class="mainul" th:fragment="searchshow">
+
+    <li th:each="bookSnapshotList:${bookSnapshotLists}">
+        <div>
+            <a th:href="@{'/BookDetail?'+'dowhat=findDetail&Bid='+ ${bookSnapshotList.Bid}}" target="_blank"><img th:src="${bookSnapshotList.Bimage}"></a>
+        </div>
+        <div>
+            <font class="price1" th:text="${bookSnapshotList.Bprice}"></font><br>
+            <font class="bookname1" th:text="${bookSnapshotList.Bname}"></font><br>
+            <a th:href="@{'/Search'+'?dowhat=searchByKey&key='+${bookSnapshotList.Sname}+'&type=&refer=Bid'}" class="shopname1" th:text="${bookSnapshotList.Sname}"></a>
+        </div>
+        <div>
+            <div>
+						<span class="tradenum1">成交&nbsp;&nbsp;<font
+                                class="font_bold_pink" th:text="${bookSnapshotList.Bsalednum}">笔</font></span>
+            </div>
+            <div>
+						<span class="commentnum1">评价&nbsp;&nbsp;
+						<font class="font_bold_blue" th:text="${bookSnapshotList.Bcommentnum}"></font></span>
+            </div>
+        </div>
+    </li>
+
+</ul>
+
+
+</body>
+</html>

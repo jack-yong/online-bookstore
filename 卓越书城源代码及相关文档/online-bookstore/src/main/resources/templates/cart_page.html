@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/mystyle.css}" type="text/css" rel="stylesheet">
+    <script type="text/javascript" th:src="@{/js/public.js}"></script>
+    <title>Title</title>
+</head>
+<body>
+<div th:replace="layouts/navbar :: navbar"></div>
+<div th:replace="layouts/header :: header"></div>
+<div th:replace="layouts/cart_main :: cart_main" ></div>
+<div th:replace="layouts/footer :: footer"></div>
+</body>
+<script th:src="@{/js/cart_main.js}"></script>
+<script th:inline="javascript">
+    var list = [[${bookInCartBeanList}]];
+    //如果选中了所有，则设置全选、批量删除
+    if(list && <%=isCheckedAllBooks%> == true){
+        $('#allbooksincart_checkbox').attr('checked','checked');
+        $('#deleteall').css("visibility","visible");
+    }
+    //计算合计
+    updateTotal();
+</script>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>挑选书籍</title>
+    <link th:href="@{/css/mystyle.css}" type="text/css" rel="stylesheet">
+    <script type="text/javascript" th:src="@{/js/public.js}"></script>
+</head>
+<body>
+<div th:replace="layouts/navbar :: navbar"></div>
+<div th:replace="layouts/header :: header"></div>
+
+<!-- 主体-->
+<div th:replace="layouts/search_main :: search_main"></div>
+
+<!-- 尾部-->
+<div th:replace="layouts/footer :: footer"></div>
+
+</body>
+</html>

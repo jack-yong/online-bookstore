@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cyong.mapper.ShopMapper">
+
+        <insert id="addShop" parameterType="String">
+            insert into onlinebookstore.shop (Sname)
+            values (#{Sname})
+        </insert>
+
+        <select id="findShopBySid" resultType="Shop">
+            select * from onlinebookstore.Shop where Sid = #{sid}
+        </select>
+
+        <select id="getSidByUid" resultType="int">
+            select Sid from onlinebookstore.shop
+            where Uid = #{uid}
+        </select>
+
+        <update id="updateShop" parameterType="shop">
+            update onlinebookstore.shop set Sicon = #{Sicon},Sname = #{Sname},
+            Sactivity = #{Sactivity},Stransprice = #{Stransprice},Ssummary=#{Ssummary}
+            where Sid = #{Sid}
+        </update>
+
+        <select id="getSiconBySid" resultType="String">
+            select Sicon from onlinebookstore.shop
+            where Sid = #{sid};
+        </select>
+
+</mapper>

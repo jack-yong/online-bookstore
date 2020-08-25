@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="inner" th:fragment="myaddress_main">
+
+    <!-- 左侧导航栏 -->
+    <div th:replace="layouts/left :: left" th:flush="true"></div>
+    <!-- 右侧内容 -->
+    <div class="right">
+        <div class="divline" style="font-size:15px;">收货地址</div><!--divline-->
+        <div class="contentline">
+            <ul class="addressul"></ul><br>
+            <a class="greenbutton" rel="facebox"title="添加新地址" href="/writeorder_addaddress">添加新地址</a>
+        </div><!--contentline-->
+    </div>
+</div>
+
+</body>
+</html>

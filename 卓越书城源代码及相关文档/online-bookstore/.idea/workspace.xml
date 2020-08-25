@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="742d7ff0-d5f0-467e-88fd-ba658dd0041e" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="onlinebookstore: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="online-bookstore" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>team</find>
+      <find>#backtop a</find>
+      <find>.main</find>
+      <find>.span2</find>
+      <find>.greenbtn</find>
+      <find>#backtop span</find>
+      <find>.green_bold_a</find>
+      <find>greenbutton</find>
+      <find>.greenbutton</find>
+      <find>.mainul li</find>
+      <find>getBookDetailById</find>
+      <find>.atsale</find>
+      <find>.partbg .buyatoncebtn</find>
+      <find>.tabcontainer .tabs li.current</find>
+      <find>TRADESTATUS_WAITPAY</find>
+      <find>.settlebtn</find>
+      <find>cart_footer</find>
+      <find>.writeorder_title hr</find>
+      <find>.font_big_bold_green</find>
+      <find>.addressul li a</find>
+      <find>detail_a</find>
+      <find>009966</find>
+      <find>#facebox .popup</find>
+      <find>.font_normal_green</find>
+      <find>#facebox .facetitle</find>
+      <find>Bsalednum</find>
+      <find>Bname</find>
+      <find>bookmanger</find>
+      <find>.searchdiv2 a:first-child</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/resources/templates/layouts/navbar.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cyong/controller/CartController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cyong/util/FileUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/layouts/myinfomain.html" />
+        <option value="$PROJECT_DIR$/src/test/java/com/cyong/UserTests.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/myaddress_page.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/layouts/writeorder_addaddress.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cyong/pojo/Address.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/AddressMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/writeorder_main.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cyong/controller/SelfInfoController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/layouts/myaddress_main.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cyong/controller/AddressController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cyong/mapper/AddressMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/layouts/left.html" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/38ce1f19-426d-4fa8-b95f-52612fa45823/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/myorder_page.html" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/layouts/myorder_main.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/mangerlogin.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/shopmanger.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ShopMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cyong/controller/ShopController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cyong/mapper/OrderformMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/OrderformMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cyong/service/OrderformService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cyong/service/OrderformServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/cyong/orderformTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/dashboard.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cyong/controller/OrderController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cyong/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/bookmanger.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/bookedit.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cyong/mapper/BookMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/BookMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cyong/service/BookService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cyong/service/BookServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/cyong/BookTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/layouts/commons.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/Statebook.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cyong/controller/BookController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/layouts/search_main.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/css/mystyle.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cyong/common/Pager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cyong/controller/SearchController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/layouts/header.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/layouts/search_pagebar.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/layouts/type_navi.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yaml" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/layouts/hotshow.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/ordermanger.html" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="online-bookstore" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="online-bookstore" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="14" />
+    <option name="y" value="24" />
+    <option name="width" value="1346" />
+    <option name="height" value="688" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="online-bookstore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="online-bookstore" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1598353407507" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\online-bookstore\src\main\resources\templates" />
+      <recent name="F:\大三下学习相关文件\J2EE与中间件技术\online-bookstore\src\main\resources\templates\layouts" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\online-bookstore\src\main\resources\static\img" />
+      <recent name="G:\online-bookstore\src\main\resources\static\js" />
+      <recent name="G:\online-bookstore\src\main\resources\static\css" />
+      <recent name="F:\大三下学习相关文件\J2EE与中间件技术\online-bookstore\src\main\resources\static\css\images" />
+      <recent name="F:\大三下学习相关文件\J2EE与中间件技术\online-bookstore\src\main\resources\static\images\advers" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.OnlineBookstoreApplication">
+    <configuration name="BookTest.testG" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="online-bookstore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cyong.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cyong" />
+      <option name="MAIN_CLASS_NAME" value="com.cyong.BookTest" />
+      <option name="METHOD_NAME" value="testG" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookTest.testH" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="online-bookstore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cyong.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cyong" />
+      <option name="MAIN_CLASS_NAME" value="com.cyong.BookTest" />
+      <option name="METHOD_NAME" value="testH" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookTest.testI" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="online-bookstore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cyong.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cyong" />
+      <option name="MAIN_CLASS_NAME" value="com.cyong.BookTest" />
+      <option name="METHOD_NAME" value="testI" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookTest.testJ" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="online-bookstore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cyong.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cyong" />
+      <option name="MAIN_CLASS_NAME" value="com.cyong.BookTest" />
+      <option name="METHOD_NAME" value="testJ" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="orderformTest.testH" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="online-bookstore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cyong.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.cyong" />
+      <option name="MAIN_CLASS_NAME" value="com.cyong.orderformTest" />
+      <option name="METHOD_NAME" value="testH" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OnlineBookstoreApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="online-bookstore" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.cyong.OnlineBookstoreApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BookTest.testJ" />
+        <item itemvalue="JUnit.BookTest.testI" />
+        <item itemvalue="JUnit.BookTest.testH" />
+        <item itemvalue="JUnit.BookTest.testG" />
+        <item itemvalue="JUnit.orderformTest.testH" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="742d7ff0-d5f0-467e-88fd-ba658dd0041e" name="Default Changelist" comment="" />
+      <created>1589518462961</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589518462961</updated>
+      <workItem from="1589518466739" duration="4161000" />
+      <workItem from="1589530762951" duration="11934000" />
+      <workItem from="1589546160309" duration="5993000" />
+      <workItem from="1589602421667" duration="14100000" />
+      <workItem from="1589624105616" duration="14499000" />
+      <workItem from="1589697930785" duration="24172000" />
+      <workItem from="1589767398682" duration="17013000" />
+      <workItem from="1589852979992" duration="28368000" />
+      <workItem from="1589892753808" duration="2617000" />
+      <workItem from="1589952202725" duration="18552000" />
+      <workItem from="1590037089078" duration="16555000" />
+      <workItem from="1590065544889" duration="1620000" />
+      <workItem from="1591183043932" duration="150000" />
+      <workItem from="1591253724052" duration="19180000" />
+      <workItem from="1591318174790" duration="21802000" />
+      <workItem from="1591424305160" duration="17323000" />
+      <workItem from="1591509005781" duration="28232000" />
+      <workItem from="1591553277986" duration="355000" />
+      <workItem from="1591553717774" duration="13626000" />
+      <workItem from="1591567377829" duration="3796000" />
+      <workItem from="1591609376659" duration="20552000" />
+      <workItem from="1591661529138" duration="7825000" />
+      <workItem from="1591682357627" duration="6097000" />
+      <workItem from="1591876504346" duration="559000" />
+      <workItem from="1591964360286" duration="248000" />
+      <workItem from="1593113540391" duration="1500000" />
+      <workItem from="1593156796117" duration="76000" />
+      <workItem from="1598352239071" duration="861000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="orderformTest_testG - 2020.06.08 at 05h 17m 26s.xml">
+      <configuration name="orderformTest.testG" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="orderformTest_testG - 2020.06.08 at 05h 20m 20s.xml">
+      <configuration name="orderformTest.testG" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="orderformTest_testG - 2020.06.08 at 05h 22m 09s.xml">
+      <configuration name="orderformTest.testG" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="orderformTest_testF - 2020.06.08 at 05h 33m 30s.xml">
+      <configuration name="orderformTest.testF" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="orderformTest_testF - 2020.06.08 at 05h 36m 44s.xml">
+      <configuration name="orderformTest.testF" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="orderformTest_testH - 2020.06.08 at 20h 33m 04s.xml">
+      <configuration name="orderformTest.testH" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookTest_testG - 2020.06.08 at 21h 14m 01s.xml">
+      <configuration name="BookTest.testG" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookTest_testH - 2020.06.08 at 22h 00m 42s.xml">
+      <configuration name="BookTest.testH" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookTest_testI - 2020.06.08 at 23h 37m 50s.xml">
+      <configuration name="BookTest.testI" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookTest_testJ - 2020.06.08 at 23h 57m 46s.xml">
+      <configuration name="BookTest.testJ" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="301766000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49918166" visible="true" weight="0.30862328" />
+      <window_info id="Structure" order="1" sideWeight="0.5008183" side_tool="true" weight="0.3343419" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" sideWeight="0.5008183" side_tool="true" weight="0.3343419" />
+      <window_info id="Image Layers" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.36006546" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.1603928" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.3289689" />
+      <window_info anchor="bottom" id="Database Console" order="8" weight="0.25204584" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3289689" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5015129" side_tool="true" weight="0.5139116" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.3289689" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.37315875" />
+      <window_info anchor="bottom" id="Database Changes" order="15" weight="0.62193125" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.2473525" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.23373677" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32980332" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/layouts/type_navi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32">
+          <caret line="138" column="94" selection-start-line="138" selection-start-column="94" selection-end-line="138" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/layouts/search_pagebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="183" selection-start-line="13" selection-start-column="183" selection-end-line="13" selection-end-column="183" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cyong/controller/BookController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="47" column="32" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="32" />
+          <folding>
+            <element signature="e#6333#6334#0" expanded="true" />
+            <element signature="e#6367#6368#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/ShopMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-602" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/OrderformMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/AddressMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/TransactionMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-77" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cyong/util/FileUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-241">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cyong/util/Define.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-702">
+          <caret line="4" column="62" lean-forward="true" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cyong/util/RegisterResultEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cyong/util/LoginResultEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cyong/util/CookieUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-634">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cyong/OnlineBookstoreApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cyong/mapper/AddressMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/cyong/BookTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="101" column="31" selection-start-line="101" selection-start-column="31" selection-end-line="101" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/cyong/AddressTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1950">
+          <caret line="78" column="31" lean-forward="true" selection-start-line="78" selection-start-column="31" selection-end-line="78" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://38ce1f19-426d-4fa8-b95f-52612fa45823/schema/onlinebookstore/table/address">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="16" column="55" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/BookMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cyong/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://38ce1f19-426d-4fa8-b95f-52612fa45823/schema/onlinebookstore/table/book">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://38ce1f19-426d-4fa8-b95f-52612fa45823/schema/onlinebookstore/table/transaction">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://38ce1f19-426d-4fa8-b95f-52612fa45823/schema/onlinebookstore/table/orderform">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cyong/controller/SearchController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1372" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/detail_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-47" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/myinfo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-122" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/searchpage.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/shopmanger.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-525" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/Statebook.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3075" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/writeorder_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/writeorder_addaddress.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/layouts/cart_main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1500" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/layouts/detail_main.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/layouts/footer.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/layouts/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="18" column="65" lean-forward="true" selection-start-line="18" selection-start-column="65" selection-end-line="18" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/layouts/hotshow.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/ordermanger.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="69" column="124" selection-start-line="69" selection-start-column="124" selection-end-line="69" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cyong/pojo/Orderform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/layouts/commons.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/bookedit.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/bookmanger.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="66" selection-start-line="66" selection-end-line="70" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/myaddress_page.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mangerlogin.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cyong/controller/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5325">
+          <caret line="230" column="20" selection-start-line="230" selection-start-column="20" selection-end-line="230" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cyong/config/MymvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cyong/config/LoginHandlerInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

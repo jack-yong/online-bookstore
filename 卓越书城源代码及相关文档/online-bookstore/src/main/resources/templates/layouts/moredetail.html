@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- 选项卡 -->
+<div class="tabcontainer" id='detail_tab' th:fragment="moredetail">
+    <ul>
+        <li id="content_tab">商品详情</li>
+    </ul>
+
+    <!-- 商品详情选项卡 -->
+    <div class="tabdiv" id="content_div">
+        <div class="bookinfo" style="height:100px;">
+            <span th:text="'版次:&nbsp;&nbsp;'+${BookDetail.Bversion}"></span>
+            <span th:text="'页数:&nbsp;&nbsp;'+${BookDetail.Bpagenum}"></span>
+            <span th:text="'字数:&nbsp;&nbsp;'+${BookDetail.Bwordnum}"></span>
+            <span th:text="'印刷时间:&nbsp;&nbsp;'+${BookDetail.Bprintdate}"></span>
+            <span th:text="'开本:&nbsp;&nbsp;'+${BookDetail.Bsize}"></span>
+            <span th:text="'纸张:&nbsp;&nbsp;'+${BookDetail.Bpaperstyle}"></span>
+            <span th:text="'印次:&nbsp;&nbsp;'+${BookDetail.Bprintnum}"></span>
+            <span th:text="'包装:&nbsp;&nbsp;'+${BookDetail.Bpackage}"></span>
+            <span th:text="'国际标准书号ISBN:&nbsp;&nbsp;'+${BookDetail.Bisbn}"></span>
+        </div>
+
+        <!-- 内容简介 -->
+        <div class="title"><span>&nbsp;内容简介&nbsp;</span></div><br>
+        <hr class="titlehr">
+        <p th:text="${BookDetail.Bcontentsummary}">
+        </p>
+
+        <!-- 作者简介 -->
+        <div class="title"><span>&nbsp;作者简介&nbsp;</span></div><br>
+        <hr class="titlehr">
+        <p th:text="${BookDetail.Bauthorsummary}">
+        </p>
+
+        <!-- 媒体评价 -->
+        <div class="title"><span>&nbsp;媒体评价&nbsp;</span></div><br>
+        <hr class="titlehr">
+        <p th:text="${BookDetail.Bmediacomment}">
+        </p>
+
+        <!-- 试读章节 -->
+        <div class="title"><span>&nbsp;试读章节&nbsp;</span></div><br>
+        <hr class="titlehr">
+        <p th:text="${BookDetail.Btastecontent}">
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>

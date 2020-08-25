@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/mystyle.css}" type="text/css" rel="stylesheet">
+    <title>登录</title>
+    <script type="text/javascript" th:src="@{/js/checkLoginInfo.js}"></script>
+</head>
+<body>
+    <div th:replace="layouts/title :: title" th:flush="true"></div>
+
+    <!-- 登录框-->
+    <div class="logindiv1">
+        <div class="logindiv2">
+            <span class="font_bold_black">用户登录</span>
+        </div>
+        <div class="logindiv3">
+            <div class="logindiv4">
+                <form th:action="@{/user/tologin}" method="post">
+                    <input type="text" placeholder="用户名" class="userbg bgedit" th:name="username" autocomplete="off" autofocus="autofocus"><br>
+                    <span class="tip1 font_normal_red" th:text="${msg1}" th:if="${not #strings.isEmpty(msg1)}"></span><br> <!-- 用户名不存在 -->
+
+                    <input type="password" placeholder="密码" class="pwdbg bgedit" th:name="password" autocomplete="off"><br>
+                    <span class="tip1 font_normal_red" th:text="${msg2}" th:if="${not #strings.isEmpty(msg2)}"></span><br> <!-- 密码错误 -->
+
+                    <a th:href="@{/user/register}" target="_self">免费注册</a><br>
+                    <input type="submit" value="登     录" class="greenbtn font_bold_white"
+                           onclick="return checkLoginInfo(username.value,password.value)">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 尾部-->
+    <div th:replace="layouts/footer :: footer" th:flush="true"></div>
+</body>
+</html>

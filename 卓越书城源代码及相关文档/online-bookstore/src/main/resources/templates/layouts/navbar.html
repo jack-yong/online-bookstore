@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="navi bg_gray" th:fragment="navbar">
+    <!-- 登录部分 -->
+    <span class="span1 font_normal_gray">欢迎来到卓越书店！
+			<div id="hello" th:style="'display:' + @{(${session.loginuser}? 'none' : 'inline-block')} + ''">
+					<a th:href="@{/user/login}" target="_self">请登录</a>
+					<a th:href="@{/user/register}"  target="_self">免费注册</a>
+			</div>
+			<div id="unlogin" th:style="'display:' + @{(${session.loginuser}? 'inline-block' : 'none')} + ''">
+				您好，<a th:href="@{/userinfo}" target="_self" class="green_bold_a" th:text="${session.loginuser}"></a>
+					<a th:href="@{/user/loginout}">退出</a>
+			</div>
+	</span>
+
+    <!-- 后面连接部分 -->
+    <span class="span2">
+	<img th:src="@{/css/images/home.png}">
+	<a th:href="@{/index}">首页</a>
+	<img th:src="@{/css/images/cart.png}">
+	<a th:href="@{/lookCart}">购物车</a>
+	</span>
+
+</div>
+</body>
+</html>

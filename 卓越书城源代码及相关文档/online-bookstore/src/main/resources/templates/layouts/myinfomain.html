@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="inner" th:fragment="myinfomain">
+
+    <!-- 左侧导航栏 -->
+    <div th:replace="layouts/left :: left" th:flush="true"></div>
+
+    <!-- 右侧内容 -->
+    <div class="right">
+        <div class="divline" style="font-size:15px;">个人信息</div><!--divline-->
+        <div class="contentline" style="font-size:14px;"><br>
+
+            <form  th:action="@{/updateMyInfo}"  enctype="multipart/form-data" method="post">
+
+                <!-- 帐号信息 -->
+                <div class="title"><span>&nbsp;基本信息&nbsp;</span></div><br>
+                <hr class="titlehr">
+
+                <div class="uploaddivparent">
+
+                    <div class="uploaddiv">
+                        <img th:src="${(user.Uavatar != null && !#strings.isEmpty(user.Uavatar)) ? '/images/avatars/'+user.Uavatar : '/images/avatars/1.jpg'}" style="width:50px;border: 2px solid #DCDCDC;"/>
+                    </div>
+
+                    <div class="uploaddiv">
+                        修改头像：&nbsp;&nbsp;<input type="file" name="fileName">
+                    </div>
+
+                    <div class="uploaddiv" th:name="${user.Uid}" style="display: none"></div>
+
+                    <div class="uploaddiv">
+                        昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：&nbsp;&nbsp;<input type="text" name="nickname" onkeyup="updateLeftStrLength(this)" maxlength="15" autocomplete="off" class="editline" th:value="${user.Unickname}">&nbsp;&nbsp;<font>您还可以输入<span class="font_bold_green">10</span>个字</font>
+                    </div>
+                </div>
+
+                <!-- 选填信息 -->
+                <div class="title"><span>&nbsp;选填信息&nbsp;</span></div><br>
+                <hr class="titlehr">
+
+                <div class="uploaddivparent">
+                    <div class="uploaddiv">
+                        真实姓名：&nbsp;&nbsp;<input type="text" name="realname" autocomplete="off" class="editline" th:value="${user.Urealname}">
+                    </div>
+
+                    <div class="uploaddiv">
+                        性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：&nbsp;&nbsp;
+
+                        <input type="radio" name="sex" value="M" th:checked="${user.Usex == 'M'} ? true : false">男 &nbsp;&nbsp;
+                        <input type="radio" name="sex" value="F"  th:checked="${user.Usex == 'F'} ? true : false">女
+                    </div>
+
+                    <div class="uploaddiv">
+                        家庭住址：&nbsp;&nbsp;<input type="text" name="address" autocomplete="off" class="editline" style="width:50%;" th:value="${user.Uaddress}">
+                    </div>
+
+                    <div class="uploaddiv">
+                        联系方式：&nbsp;&nbsp;<input type="text" name="phone" autocomplete="off" class="editline" th:value="${user.Uphone}">
+                    </div>
+
+                    <div class="uploaddiv">
+                        电子邮箱：&nbsp;&nbsp;<input type="text" name="email" autocomplete="off" class="editline" th:value="${user.Uemail}">
+                    </div>
+
+
+                    <div class="uploaddiv">
+                        <input type="submit" class="greenbutton" value="保存"  onclick="return checkMyInfoValidness();"/>
+                    </div>
+                </div>
+            </form>
+
+        </div><!--contentline-->
+    </div>
+</div>
+</body>
+</html>
