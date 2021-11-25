@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/mystyle.css}" type="text/css" rel="stylesheet">
+    <script type="text/javascript" th:src="@{/js/checkRegisterInfo.js}"></script>
+    <title>注册</title>
+</head>
+<body>
+<div th:replace="layouts/title :: title" th:flush="true"></div>
+
+<div class="regdiv1">
+    <div class="regdiv2">
+        <span class="font_bold_black">新用户注册</span>
+    </div>
+    <div class="regdiv3">
+        <div class="regdiv4">
+            <form th:action="@{/user/toregister}"  method="post">
+                <label for="id_username">用户名</label>
+                <input type="text" placeholder="昵称" class="tipedit" id="id_username" name="username"  autofocus="autofocus"><br>
+                <span class="tip font_normal_red" th:text="${msg}"></span><br> <!-- 用户名已存在提示 -->
+
+                <label for="id_password">密&nbsp;&nbsp;&nbsp;码</label>
+                <input type="password" placeholder="不少于6位" class="normaledit" id="id_password" name="password" value=""><br>
+
+
+                <label for="id_repassword">确&nbsp;&nbsp;&nbsp;认</label>
+                <input type="password" placeholder="再次输入上面的密码" class="normaledit" id="id_repassword" name="repassword" value=""><br>
+
+                <input type="submit" value="立即注册" class="greenbtn font_bold_white"
+                       onclick="return checkRegisterInfo(username.value,password.value,repassword.value)">
+            </form>
+        </div>
+    </div>
+</div>
+<!-- 尾部-->
+<div th:replace="layouts/footer :: footer" th:flush="true"></div>
+
+</body>
+</html>

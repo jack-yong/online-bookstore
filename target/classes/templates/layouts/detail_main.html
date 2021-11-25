@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="detailmain" th:fragment="detail_main">
+
+    <!-- 书籍详情关键信息 -->
+    <div th:replace="layouts/keydetail :: keydetail"></div>
+    <div th:replace="layouts/moredetail :: moredetail"></div>
+
+</div>
+
+</body>
+</html>

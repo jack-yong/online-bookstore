@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="paymain" th:fragment="tip_main">
+
+
+    <div class="pay" style="height:260px;" th:if="${result} == 'INVALID'">
+        <div class="cart_row_div font_bold_gray" style="margin-top:100px;">本次支付失败。请重新选购。</div><br>
+        <a href="/index" class="green_a">热销书籍</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href='/lookCart' class='green_a'>返回购物车</a>
+    </div>
+
+    <div class="pay" th:if="${result} == 'SUCCESS'">
+        <div class="cart_row_div font_bold_gray" style="margin-top:20;">您已成功提交订单！</div><br>
+
+        <!-- 支付信息 -->
+        <table>
+            <tr>
+                <td>支付金额：<font class="font_bold_green" style="font-size:25px;" th:text="'￥'+${payTotal}"></font></td>
+                <td>收款方：<font class="font_normal_green">卓越网</font></td>
+                <td>类型：<font class="font_normal_green">订单</font></td>
+            </tr>
+        </table>
+    </div>
+
+
+</div>
+</body>
+</html>

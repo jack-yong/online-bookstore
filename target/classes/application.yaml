@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    username: root
+    url: jdbc:mysql://localhost:3306/onlinebookstore?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 11111111
+  thymeleaf:
+    cache: false
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+
+#mybatis整合
+mybatis:
+  type-aliases-package: com.cyong.pojo
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#解决地址栏sessionid问题
+server:
+  servlet:
+    session:
+      tracking-modes: cookie
+      cookie:
+        http-only: true

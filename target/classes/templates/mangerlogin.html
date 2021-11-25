@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"  >
+    <!-- Custom styles for this template -->
+    <link th:href="@{/css/signin.css}" rel="stylesheet">
+</head>
+<body class="text-center">
+
+<form class="form-signin" th:action="@{/user/tomangerlogin}">
+    <img class="mb-4" th:src="@{/img/bootstrap-solid.svg}" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal"  >卓越书城后台登陆</h1>
+    <p style="color: red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+    <input type="text" name="username" class="form-control" th:placeholder="用户名" required="" autofocus="">
+    <input type="password" name="password" class="form-control" th:placeholder="密码" required="">
+    <button class="btn btn-lg btn-primary btn-block" type="submit" th:text="登陆"></button>
+    <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+</form>
+
+</body>
+
+</html>

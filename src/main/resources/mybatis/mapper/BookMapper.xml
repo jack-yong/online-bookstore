@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cyong.mapper.BookMapper">
+    <insert id="addBook" parameterType="BookDetail">
+        insert into  onlinebookstore.book (Bimage, Bprice, Bname, Btype, Sid, Bauthor, Bpublisher, Bpublishdate, Bsalednum, Bcommentnum, Boriprice, Bversion, Bpagenum, Bwordnum, Bprintdate, Bsize, Bpaperstyle, Bprintnum, Bpackage, Bisbn, Bcontentsummary, Bauthorsummary, Bmediacomment, Btastecontent, Bstocknum, Buploaddate)
+        values (#{Bimage}, #{Bprice}, #{Bname}, #{Btype}, #{Sid}, #{Bauthor}, #{Bpublisher}, #{Bpublishdate}, #{Bsalednum}, #{Bcommentnum}, #{Boriprice}, #{Bversion}, #{Bpagenum}, #{Bwordnum}, #{Bprintdate}, #{Bsize}, #{Bpaperstyle}, #{Bprintnum}, #{Bpackage}, #{Bisbn}, #{Bcontentsummary}, #{Bauthorsummary}, #{Bmediacomment}, #{Btastecontent}, #{Bstocknum}, #{Buploaddate})
+    </insert>
+
+    <select id="getRandom8Books" resultMap="BookShop">
+      select b.Bid bid,b.Bimage bimage,b.Bprice bprice,b.Bname bname,s.Sname sname,b.Bsalednum bsalednum,b.Bcommentnum  bcommentnum
+      from onlinebookstore.book b ,onlinebookstore.shop s
+       where b.Sid=s.Sid
+      order by rand() limit 8
+    </select>
+
+    <select id="getBookSnapshotsByKey" resultMap="BookShop">
+        select b.Bid bid,b.Bimage bimage,b.Bprice bprice,b.Bname bname,s.Sname sname,b.Bsalednum bsalednum,b.Bcommentnum  bcommentnum
+        from onlinebookstore.book b,onlinebookstore.shop s
+        where b.Sid=s.Sid and (
+        Bname like concat('%', #{key}, '%') or
+        Bauthor like concat('%', #{key}, '%') or
+        Bpublisher like concat('%', #{key}, '%') or
+        Sname like concat('%', #{key}, '%')) order by ${refer}
+        limit  ${PageSize*(pageNow - 1)} ,  #{PageSize}
+    </select>
+
+    <select id="getBookSnapshotsByType" resultMap="BookShop">
+        select b.Bid bid,b.Bimage bimage,b.Bprice bprice,b.Bname bname,s.Sname sname,b.Bsalednum bsalednum,b.Bcommentnum  bcommentnum
+        from onlinebookstore.book b,onlinebookstore.shop s
+        where b.Sid=s.Sid and b.Btype=#{type} order by ${refer}
+        limit  ${PageSize*(pageNow - 1)} ,  #{PageSize}
+    </select>
+
+    <select id="getBookDetailById" resultType="BookDetail">
+          select b.Bid Bid, Bimage, Bprice, Bname, s.Sid Sid,
+           Sname, Bsalednum, Bcommentnum, Bauthor, Bpublisher,
+            Bpublishdate, Boriprice, s.Stransprice Stransprice,
+             Sactivity, Bversion, Bpagenum, Bwordnum, Bprintdate,
+             Bsize, Bpaperstyle, Bprintnum, Bpackage, Bisbn,
+             Bcontentsummary, Bauthorsummary, Bmediacomment,
+             Btastecontent,s.Sicon Sicon
+          from onlinebookstore.book b,onlinebookstore.shop s
+          where b.Bid = #{bid} and b.Sid=s.Sid limit 1
+    </select>
+
+    <select id="getBookInCartByBid" resultType="BookInCart">
+        select b.Bid ,b.Bimage ,b.Bprice ,b.Bname ,
+        s.Sid,s.Sicon, s.Sname ,b.Boriprice
+        from onlinebookstore.book b ,onlinebookstore.shop s
+       where b.Sid=s.Sid and b.Bid = #{Bid}
+    </select>
+
+
+    <select id="getBookSnapshotsPageCountByKey" resultType="int">
+        select count(*)
+        from onlinebookstore.book b,onlinebookstore.shop s
+        where b.Sid=s.Sid and (
+        Bname like concat('%', #{key}, '%') or
+        Bauthor like concat('%', #{key}, '%') or
+        Bpublisher like concat('%', #{key}, '%') or
+        Sname like concat('%', #{key}, '%'))
+    </select>
+
+    <select id="getBookSnapshotsPageCountByType" resultType="int">
+        select count(*)
+        from  onlinebookstore.book
+        where Btype = #{type}
+    </select>
+
+    <select id="getBookInCartBySid" resultType="BookInCart">
+         select b.Bid ,b.Bimage ,b.Bprice ,b.Bname ,
+        s.Sid,s.Sicon, s.Sname ,b.Boriprice
+        from onlinebookstore.book b ,onlinebookstore.shop s
+       where b.Sid=s.Sid and b.Sid = #{Sid}
+    </select>
+
+    <delete id="delBookByBid" parameterType="int">
+        delete from onlinebookstore.book where Bid = #{Bid}
+    </delete>
+
+    <update id="updateBookDetail" parameterType="BookDetail">
+        update onlinebookstore.book set Bimage = #{Bimage}, Bprice = #{Bprice},
+        Bname = #{Bname},Bsalednum = #{Bsalednum},Bcommentnum = #{Bcommentnum},
+        Bauthor =#{Bauthor},Bpublisher = #{Bpublisher},Boriprice = #{Boriprice},
+        Bversion = #{Bversion},Bpagenum = #{Bpagenum},Bwordnum =#{Bwordnum},
+        Bsize = #{Bsize},Bpaperstyle=#{Bpaperstyle},Bpackage=#{Bpackage},
+        Bisbn =#{Bisbn},Bcontentsummary=#{Bcontentsummary},Bauthorsummary =#{Bauthorsummary},
+        Bmediacomment = #{Bmediacomment},Btastecontent=#{Btastecontent}
+        where Bid = #{Bid}
+    </update>
+
+    <resultMap id="BookShop" type="BookSnapshot">
+        <result property="Bid" column="bid"/>
+        <result property="Bimage" column="bimage"/>
+        <result property="Bprice" column="bprice"/>
+        <result property="Bname" column="bname"/>
+        <result property="Bsalednum" column="bsalednum"/>
+        <result property="Bcommentnum" column="bcommentnum"/>
+        <result property="Sname" column="sname"/>
+    </resultMap>
+
+
+
+
+
+
+
+
+</mapper>

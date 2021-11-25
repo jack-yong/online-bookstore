@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="searchdiv2" th:fragment="search_pagebar">
+
+    <a  th:href="@{/Search}+'?dowhat='+${dowhat}+'&key='+${key}+'&type='+${type}+'&refer='+${refer}+'&curPage=1'" th:text="首页">&lt;</a>
+
+    <a th:href="@{/Search}+'?dowhat='+${dowhat}+'&key='+${key}+'&type='+${type}+'&refer='+${refer}+'&curPage='+${pager.currentPage -1}" th:if="${pager.currentPage > 1}" th:text="上一页"></a>
+
+    <a th:href="@{/Search}+'?dowhat='+${dowhat}+'&key='+${key}+'&type='+${type}+'&refer='+${refer}+'&curPage='+${pager.currentPage +1}" th:if="${pager.currentPage < pager.totolResults}" th:text="下一页"></a>
+
+    <a th:href="@{/Search}+'?dowhat='+${dowhat}+'&key='+${key}+'&type='+${type}+'&refer='+${refer}+'&curPage='+${pager.totolResults}"  th:text="尾页"></a>
+
+
+</div>
+</body>
+</html>

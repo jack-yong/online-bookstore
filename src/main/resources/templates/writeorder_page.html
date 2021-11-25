@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/css/mystyle.css}" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div th:replace="layouts/navbar :: navbar"></div>
+<div th:replace="layouts/header :: header"></div>
+
+<!-- 主体-->
+<div th:replace="layouts/writeorder_main :: writeorder_main"></div>
+
+<div th:replace="layouts/footer :: footer"></div>
+
+<script type="text/javascript" th:src="@{/js/public.js}"></script>
+<script type="text/javascript" th:src="@{js/writeorder_main.js}"></script>
+</body>
+</html>

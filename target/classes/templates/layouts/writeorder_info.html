@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="writeorder_info" th:fragment="writeorder_info">
+    <div class="writeorder_title" >
+        <div class="diamond"></div><span>确认订单信息</span><br>
+        <hr>
+    </div>
+
+    <div class="curorder_div" th:if="${orderBeanList} != null">
+
+        <div class="curorder_row_div" th:each="orderBean,orderBeanStart:${orderBeanList}">
+
+            <!-- 订单号 -->
+            <span class="font_bold_green">订单<span th:text="${orderBeanStart.count}"></span></span>
+
+            <!-- 店铺信息 -->
+            <div class="curorder_row_saler_div">
+                <img th:src="${orderBean.Sicon}"/><span th:text="${orderBean.Sname} + '配送'"></span>
+                <div>
+                    <span>运费:￥<font th:text="${orderBean.Ototaltransprice}"></font></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span>小计总额:<font class="font_bold_green">￥<font th:text="${orderBean.Ototalbooksprice}"></font></font></span>
+                </div>
+            </div>
+
+            <!-- 订单信息 -->
+            <table>
+                <tr>
+                    <td>商品信息</td>
+                    <td>原价</td>
+                    <td>单价</td>
+                    <td>数量</td>
+                    <td>小计</td>
+                    <td>操作</td>
+                </tr>
+
+                <tr th:each="bookInCart:${orderBean.bookInCartBeanList}">
+                    <td><a href="" target="_blank" class="book_snap"><img th:src="${bookInCart.Bimage}" /></a><span class="book_name" th:text="${bookInCart.Bname}"></span></td>
+                    <td><del style="color:#C9C9C9;" th:text=" '￥' + ${bookInCart.Boriprice}"></del></td>
+                    <td th:text=" '￥' + ${bookInCart.Bprice}"></td>
+                    <td th:text=" ${bookInCart.Tboughtnum}"></td>
+                    <td>￥<span th:text=" ${bookInCart.Tboughtnum * bookInCart.Bprice }"></span></td>
+                    <td><a href="javascript:void(0)" class="greenbutton" onclick="sendBookBackToCart(this)">放回购物车</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- 下部分的提交订单 -->
+    <div class="cart_footer" style="position: relative;right:30px;" th:if="${orderBeanList} != null">
+        <div>商品金额:<span class="font_bold_green">￥</span><span class="font_bold_green" th:text="${booksTotalPrice}"></span></div>
+        <div>运费:<span class="font_bold_green">￥</span><span class="font_bold_green" th:text="${transTotalPrice}"></span></div>
+        <div>实付款:<span class="font_big_bold_green">￥</span><span class="font_big_bold_green" th:text="${actualTotalPrice}"></span></div>
+        <a class="settlebtn" onclick="submitOrder()">提交订单</a>
+    </div>
+
+
+</div>
+
+</body>
+</html>

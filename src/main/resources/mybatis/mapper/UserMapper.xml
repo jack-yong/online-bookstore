@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cyong.mapper.UserMapper">
+    <select id="queryUserList"  resultType="User">
+        select * from onlinebookstore.user
+    </select>
+
+    <select id="queryUserById" resultType="User">
+        select * from onlinebookstore.user where Uid = #{Uid}
+    </select>
+
+    <insert id="addUser" parameterType="User">
+        insert into onlinebookstore.user (Upassword, Uavatar, Unickname, Urealname, Usex, Uaddress, Uphone, Uemail, Ubirthday)
+        VALUES (#{Upassword}, #{Uavatar}, #{Unickname}, #{Urealname}, #{Usex}, #{Uaddress}, #{Uphone}, #{Uemail}, #{Ubirthday})
+    </insert>
+
+    <update id="updateUser" parameterType="User">
+        update onlinebookstore.user set Upassword=#{Upassword}, Uavatar=#{Uavatar}, Unickname=#{Unickname}, Urealname=#{Urealname}, Usex=#{Usex}, Uaddress=#{Uaddress}, Uphone=#{Uphone}, Uemail=#{Uemail}, Ubirthday=#{Ubirthday}
+        where Uid = #{Uid}
+    </update>
+
+    <delete id="deleteUser" parameterType="int">
+        delete from onlinebookstore.user where Uid = #{Uid}
+    </delete>
+
+    <select id="queryUserByUnickname" resultType="User">
+        select * from onlinebookstore.user where Unickname = #{Unickname}
+    </select>
+</mapper>

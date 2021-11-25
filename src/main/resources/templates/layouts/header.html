@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="header bg_green" th:fragment="header">
+    <ul>
+        <li class="li1"><img th:src="@{/css/images/logo.jpg}" /></li>
+        <li class="li2">
+            <form th:action="@{/Search}" method="get">
+                <input type="text" name="key" autofocus="autofocus" class="search_edit" autocomplete="off" placeholder="书名/作者/内容/店家/出版社">
+                <input type="submit" value="搜索" class="search_btn font_normal_white">
+                <!-- 隐藏参数 -->
+                <input type="hidden" th:name="dowhat" value="searchByKey">
+                <input type="hidden" th:name="type" value="">
+                <input type="hidden" th:name="refer" value="Bid">
+                <input type="hidden" th:name="curPage" value="1">
+            </form>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

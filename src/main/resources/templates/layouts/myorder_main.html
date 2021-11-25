@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="inner" th:fragment="myorder_main">
+
+    <!-- 左侧导航栏 -->
+    <div th:replace="layouts/left :: left" th:flush="true"></div>
+
+    <!-- 右侧内容 -->
+    <div class="right">
+        <div class="divline" style="font-size:15px;">我的订单</div>
+
+        <div class="contentline">
+
+            <div class='emptyorder_div' th:if="${orderformArrayList} == null">
+                <span class='font_bold_gray'>一份订单记录也没有哦~快去其它地方逛逛吧!</span><br><br>
+                <a href='/index' class='greenbutton'>热销书籍</a>
+            </div>
+
+            <div class="curorder_div" th:if="${orderformArrayList} != null">
+
+                <div class="curorder_row_div" style="margin-bottom:20px; margin-top:20px;" th:each="orderBean:${orderformArrayList}">
+
+                    <!-- 订单号 -->
+                    <span class="font_bold_green" style="text-decoration:inherit;">订单号：<span th:text="${orderBean.Oid}"></span></span>
+
+                    <!-- 店铺信息 -->
+                    <div class="curorder_row_saler_div">
+                        <img th:src="${orderBean.Sicon}"/><span th:text="${orderBean.Sname} +'配送'"></span>
+                        <div>
+                            <span>运费:￥<font th:text="${orderBean.Ototaltransprice}"></font></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span th:text="'小计总额:￥'+${orderBean.Ototalbooksprice}"></span>
+                        </div>
+                    </div>
+
+                    <!-- 订单信息 -->
+                    <table>
+                        <tr>
+                            <td>商品信息</td>
+                            <td>实付款</td>
+                            <td>订单信息</td>
+                            <td>操作时间</td>
+                            <td>状态</td>
+                        </tr>
+                        <tr >
+                            <!-- 所有商品的图片缩略图 -->
+                            <td>
+                                <ul class="orderul" th:each="bookInCart:${orderBean.bookInCartBeanList}">
+
+                                    <li><a href="" target="_blank"><img th:src="${bookInCart.Bimage}"/></a></li>
+                                </ul>
+                            </td>
+                            <td th:text=" '￥'+${orderBean.Ototalbooksprice + orderBean.Ototaltransprice }"></td>
+                            <td>
+                                网上支付
+                            </td>
+
+                            <td th:text="${orderBean.Osubmittime}"></td> <!-- 最后一本书评价的时间 -->
+                            <td><span>交易完成</span></td>
+
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

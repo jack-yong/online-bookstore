@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link th:href="@{/css/dashboard.css}" rel="stylesheet">
+    <style type="text/css">
+        /* Chart.js */
+
+        @-webkit-keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        .chartjs-render-monitor {
+            -webkit-animation: chartjs-render-animation 0.001s;
+            animation: chartjs-render-animation 0.001s;
+        }
+    </style>
+</head>
+<body>
+<!--顶部导航栏-->
+<div th:replace="layouts/commons :: topbar"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div th:replace="layouts/commons::sidebar"></div>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+            <form th:action="@{/bookadd}" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label>书名</label>
+                    <input  type="text" name="Bname" class="form-control">
+                </div>
+                <div class="form-group">
+                    <div class="uploaddiv">
+                        上传图片：&nbsp;&nbsp;<input type="file" name="fileName">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>价格</label>
+                    <input  type="text" name="Bprice" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>销量</label>
+                    <input  type="text" name="Bsalednum" class="form-control" >
+                </div>
+                <div class="form-group">
+                    <label>评论数量</label>
+                    <input  type="text" name="Bcommentnum" class="form-control" >
+                </div>
+                <div class="form-group">
+                    <label>作者</label>
+                    <input  type="text" name="Bauthor" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>出版社</label>
+                    <input  type="text" name="Bpublisher" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>原价</label>
+                    <input  type="text" name="Boriprice" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>版本</label>
+                    <input type="text" name="Bversion" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>页数</label>
+                    <input  type="text" name="Bpagenum" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>字数</label>
+                    <input  type="text" name="Bwordnum" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>开本</label>
+                    <input  type="text" name="Bsize" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>纸张</label>
+                    <input  type="text" name="Bpaperstyle" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>印次</label>
+                    <input  type="text" name="Bprintnum" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>包装</label>
+                    <input  type="text" name="Bpackage" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>isbn号</label>
+                    <input  type="text" name="Bisbn" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>内容简介</label>
+                    <textarea  type="text" name="Bcontentsummary" class="form-control">
+
+                    </textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>作者简介</label>
+                    <textarea  type="text" name="Bauthorsummary" class="form-control">
+
+                    </textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>媒体评论</label>
+                    <textarea  type="text" name="Bmediacomment" class="form-control">
+
+                    </textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>试读章节</label>
+                    <textarea  type="text" name="Btastecontent" class="form-control">
+
+                    </textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">新增</button>
+            </form>
+        </main>
+    </div>
+</div>
+</body>
+</html>

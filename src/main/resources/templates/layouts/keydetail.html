@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:fragment="keydetail">
+    <!-- 书图片 -->
+    <div class="picture" >
+        <img th:src="${BookDetail.Bimage}">
+    </div>
+
+    <!-- 基本信息-->
+    <div class="detailinfo grayfont" >
+        <div class="childdiv">
+
+            <!-- 书籍概要部分 -->
+            <img th:src="@{/css/images/summary.png}">
+            <hr>
+            <div class="partbg" style="height:170px;">
+                <div><font class="bookname" th:text="${BookDetail.Bname}"></font></div>
+                <div>作者:&nbsp;&nbsp;<a href="" th:text="${BookDetail.Bauthor}"></a> 著</div>
+                <div>出版社:&nbsp;&nbsp;<a href="" th:text="${BookDetail.Bpublisher}"></a></div>
+                <div th:text="'出版日期:&nbsp;&nbsp;'+${BookDetail.Bpublishdate}"></div>
+            </div>
+
+            <!-- 评价部分 -->
+            <img th:src="@{/css/images/comment.png}">
+            <hr>
+            <div class="partbg" style="height:102px;">
+                <div class="commentbar">
+                    成交量&nbsp;&nbsp;<a href="" id="traderecord_a" th:text="${BookDetail.Bsalednum}"></a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                    累计评价&nbsp;&nbsp;<a href="" id="comment_a" th:text="${BookDetail.Bcommentnum}"></a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+
+
+                    <span class="fulstar"></span>
+                    <span class="fulstar"></span>
+                    <span class="fulstar"></span>
+                    <span class="fulstar"></span>
+                    <span class="emstar"></span>
+
+                </div>
+
+                <div>店家:&nbsp;&nbsp;<img th:src="${BookDetail.Sicon}" style="width:30px;height:30px;position:relative;top:8px;"><a href="" th:text="${BookDetail.Sname}"></a></div>
+            </div>
+        </div>
+
+        <div class="childdiv">
+
+            <!-- 价格部分 -->
+            <img src="css/images/price.png">
+            <hr>
+            <div class="partbg" style="height:170px;">
+                <div>定&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<del th:text="${BookDetail.Boriprice}">￥</del></div>
+                <div>促&nbsp;&nbsp;销&nbsp;&nbsp;价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font class="atsale" th:text="${BookDetail.Bprice}">￥</font></div>
+                <div th:text=" '运&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;费&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+ ${BookDetail.Stransprice}"></div>
+                <div>本店活动&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font class="activity" th:text="${BookDetail.Sactivity}"></font></div>
+            </div>
+
+            <!-- 购买部分 -->
+            <img src="css/images/buy.png">
+            <hr>
+            <div class="partbg" style="height:102px;">
+                <a th:href="@{'/buyatonce?Bid='+${BookDetail.Bid}}" class="buyatoncebtn">立即购买</a>
+                <a th:href="@{'/AddCart?dowhat=addBookIntoCart&Bid='+${BookDetail.Bid}}" class="buyatoncebtn">加入购物车</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

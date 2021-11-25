@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/mystyle.css}" type="text/css" rel="stylesheet">
+    <title>卓越书店首页</title>
+</head>
+<body style="overflow:-Scroll;overflow-x:hidden">
+
+    <div th:replace="layouts/navbar :: navbar"></div>
+    <div th:replace="layouts/header :: header"></div>
+
+    <div class="main" >
+        <div class="maindiv0">
+            <div th:replace="layouts/type_navi :: type_navi" th:flush="true"></div>
+
+            <div th:replace="layouts/hotshow :: hotshow"  th:flush="true"></div>
+        </div>
+    </div>
+
+    <div th:replace="layouts/footer :: footer"></div>
+
+    <script type="text/javascript" th:src="@{/js/public.js}"></script>
+</body  >
+</html>

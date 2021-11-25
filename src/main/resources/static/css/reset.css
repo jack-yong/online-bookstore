@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+ol,
+ul{
+  list-style: none;
+}
+
+li{
+  display: list-item;
+}
+
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td{
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+html, 
+body{
+	height: 100%;
+}
+
+html, 
+body, 
+form, 
+ul, 
+div{
+	margin: 0;
+	padding: 0;	
+	font: 12px Arial, Helvetica, sans-serif normal;
+	line-height: 160%;
+	white-space:normal; 
+	word-wrap: break-word;
+	word-break:break-all;
+}
+
+img{
+	color: transparent;
+  	font-size: 0;
+/*
+  For IE.
+  http://css-tricks.com/ie-fix-bicubic-scaling-for-images
+*/
+  	-ms-interpolation-mode: bicubic;
+	border: 0;
+}
+
+a img, 
+a,
+button{
+	cursor: pointer;
+}
+
+.hidden{
+	display: none !important;
+}
+
+.clear{
+	clear: both;
+}
+
+.leftclear{
+	clear: left;
+}
+
+.rightclear{
+	clear: right;
+}
+
+table{
+	width: 100%;
+}
+
+input,
+button,
+select,
+textarea{
+	outline: none
+}
+
+textarea{
+	resize: none
+}
+
+p{
+	margin: 0;
+}
+

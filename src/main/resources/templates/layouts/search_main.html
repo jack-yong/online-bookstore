@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div  th:fragment="search_main">
+<!-- 显示未搜索到界面 -->
+<div class="searchmain" th:text="暂时还没有您想要的书籍诶..."  th:if="${#lists.isEmpty(bookSnapshotLists)}"></div>
+
+<div class="searchmain" th:if="${bookSnapshotLists != null}" >
+
+
+    <div th:replace="layouts/search_sen :: searchshow"></div>
+
+    <!-- 根据检索后得到的pageCount,pageNow,产生主分页 -->
+    <div th:replace="layouts/search_pagebar :: search_pagebar"></div>
+
+</div>
+
+</div>
+
+</body>
+</html>

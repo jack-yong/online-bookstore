@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="writeordermain" th:fragment="writeorder_main">
+    <div th:replace="layouts/writeorder_address :: writeorder_address"></div>
+    <div th:replace="layouts/writeorder_info :: writeorder_info"></div>
+</div>
+</body>
+</html>

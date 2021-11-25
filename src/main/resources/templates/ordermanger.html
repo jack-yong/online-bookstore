@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link th:href="@{/css/dashboard.css}" rel="stylesheet">
+    <style type="text/css">
+        /* Chart.js */
+
+        @-webkit-keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes chartjs-render-animation {
+            from {
+                opacity: 0.99
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        .chartjs-render-monitor {
+            -webkit-animation: chartjs-render-animation 0.001s;
+            animation: chartjs-render-animation 0.001s;
+        }
+    </style>
+</head>
+<body>
+
+<!--顶部导航栏-->
+<div th:replace="layouts/commons :: topbar"></div>
+
+<div class="container-fluid">
+    <div class="row">
+        <!--侧边栏-->
+        <div th:replace="layouts/commons::sidebar"></div>
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+            <div class="table-responsive">
+                <table class="table table-striped table-sm">
+                    <thead>
+                    <tr>
+                        <th>订单id</th>
+                        <th>用户id</th>
+                        <th>店铺名称</th>
+                        <th>商品价格</th>
+                        <th>运费价格</th>
+                        <th>提交日期</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="orderform:${orderforms}">
+                        <td th:text="${orderform.getOid()}"></td>
+                        <td  th:text="${orderform.getUid()}"></td>
+                        <td th:text="${orderform.getSname()}"></td>
+                        <td th:text="${orderform.getOtotalbooksprice()}"></td>
+                        <td th:text="${orderform.getOtotaltransprice()}"></td>
+                        <td th:text="${#dates.format(orderform.getOsubmittime(),'yyyy-MM-dd HH:mm:ss')}"></td>
+                        <td>
+                            <a class="btn btn-sm btn-primary" th:href="@{'/orderdetail?Oid='+ ${orderform.getOid()}}">详情</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+</html>
